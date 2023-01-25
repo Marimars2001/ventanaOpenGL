@@ -1,9 +1,17 @@
 from OpenGL.GL import *
 import glfw
 
+def dibujar():
+    glBegin(GL_TRIANGLES)
+    glColor3f(1.0,0.0,0.0)
+    glVertex3f(-1.0,0.0,0.0)
+    glVertex3f(0.0,1.0,0.0)
+    glVertex3f(1.0,0.0,0.0)
+    glEnd()
+
 def main():
     width= 400
-    height= 600
+    height= 400
     
     #Inicializar el GLFW.
     if not glfw.init():
@@ -34,7 +42,7 @@ def main():
         #Borrar contenido del viewport.
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         #Dibujar
-        
+        dibujar()
         #Polling de inputs
         glfw.poll_events()
         #Cambiar los buffers.
@@ -44,5 +52,5 @@ def main():
     glfw.terminate()
     
     #Ejecutar el main.
-    if __name__== "__main__":
-        main()
+if __name__ == "__main__":
+    main()
