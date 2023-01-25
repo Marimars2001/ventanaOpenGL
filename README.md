@@ -1,1 +1,2 @@
 # ventanaOpenGL
+Gráficos computacionales
