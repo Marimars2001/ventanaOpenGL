@@ -18,6 +18,20 @@ def dibujar_triangulos():
     
     glEnd()
 
+def dibujar_triangulo_strip():
+    glBegin(GL_TRIANGLE_STRIP)
+    
+    glColor3f(1.0,1.0,0.0)
+    glVertex3f(-0.8,0.8,0.0)
+    glVertex3f(-0.8,0.3,0.0)
+    glVertex3f(-0.2,0.8,0.0)
+    glColor3f(1.0,0.0,0.0)
+    glVertex3f(-0.6,-0.3,0.0)
+    glColor3f(0.0,1.0,0.0)
+    glVertex3f(0.3,0.4,0.0)
+    
+    glEnd()
+
 def dibujar_point():
     glBegin(GL_POINTS)
     
@@ -96,7 +110,8 @@ def main():
         #dibujar_point()
         #dibujar_lineas()
         #dibujar_lineas_strip()
-        dibujar_line_loop()
+        #dibujar_line_loop()
+        dibujar_triangulo_strip()
         
         #Polling de inputs
         glfw.poll_events()
